@@ -18,5 +18,24 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+            $rolSeeder = New RolSeeder;
+            $rolSeeder->run();
+
+            $paginaSeeder = New PaginaSeeder;
+            $paginaSeeder->run();
+
+            $enlaceSeeder = New EnlaceSeeder;
+            $enlaceSeeder->run();
+
+            $personaSeeder = New PersonaSeeder;
+            $personaSeeder->run();
+
+            $usuarioSeeder = New UsuarioSeeder;
+            $usuarioSeeder->run();
+
+            $bitacoraSeeder = New BitacoraSeeder;
+            $bitacoraSeeder->run();
+
     }
 }
