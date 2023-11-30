@@ -1,18 +1,25 @@
 import React, { useState } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  Navigate,
+} from "react-router-dom";
 import axios from "axios";
 
 function login() {
-  const [credentials, setCredentials] = useState({
-    usuario: "",
-    clave: "",
-  });
+  // const [credentials, setCredentials] = useState({
+  //   usuario: "",
+  //   clave: "",
+  // });
 
-  const handleChange = (e) => {
-    setCredentials({
-      ...credentials,
-      [e.target.name]: e.target.value,
-    });
-  };
+  // const handleChange = (e) => {
+  //   setCredentials({
+  //     ...credentials,
+  //     [e.target.name]: e.target.value,
+  //   });
+  // };
 
   return (
     <div>
@@ -27,8 +34,21 @@ function login() {
           <br />
           <input type="text" name="clave" />
           <br />
-          <button type="submit">Login</button>
+          <button
+            className="p-2 text-white bg-blue-500 rounded-sm"
+            type="submit"
+          >
+            Login
+          </button>
         </form>
+      </div>
+      <div className="text-center mt-3">
+        <p>
+          Not an user? Sign up{" "}
+          <a className="text-blue-500" href="/register">
+            Here
+          </a>
+        </p>
       </div>
     </div>
   );
