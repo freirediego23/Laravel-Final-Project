@@ -1,6 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
 function login() {
+  const [credentials, setCredentials] = useState({
+    usuario: "",
+    clave: "",
+  });
+
+  const handleChange = (e) => {
+    setCredentials({
+      ...credentials,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   return (
     <div>
       <h1 className=" text-center">Login site</h1>
